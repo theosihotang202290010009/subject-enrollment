@@ -60,6 +60,10 @@ public class CourseServiceImpl implements CourseService {
         return convertToResponse(course);
     }
 
+    @Override
+    public Course getOneById(String id) {
+        return courseRepository.getCourseId(id);
+    }
 
     @Transactional(rollbackFor = Exception.class)
     @Override
