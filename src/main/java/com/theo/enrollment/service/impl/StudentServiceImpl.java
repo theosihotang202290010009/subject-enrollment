@@ -66,6 +66,11 @@ public class StudentServiceImpl implements StudentService {
         return convertToResponse(student);
     }
 
+    @Override
+    public Student getOneById(String id) {
+        return studentRepository.getStudentId(id);
+    }
+
     @Transactional(rollbackFor = Exception.class)
     @Override
     public StudentResponse update(UpdateStudentRequest request) {

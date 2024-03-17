@@ -16,6 +16,8 @@ public interface StudentService {
     List<StudentResponse> findByName(String name);
 
     StudentResponse findById(String id);
+
+    Student getOneById(String id);
     StudentResponse update(UpdateStudentRequest request);
     void updateStatus(String id, Boolean status);
 }
