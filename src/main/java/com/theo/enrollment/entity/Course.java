@@ -13,7 +13,6 @@ import lombok.*;
 @Builder
 public class Course {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     @Column(name = "course_name")
