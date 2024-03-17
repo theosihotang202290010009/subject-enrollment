@@ -7,7 +7,7 @@ import com.theo.enrollment.entity.Course;
 import com.theo.enrollment.repository.CourseRepository;
 import com.theo.enrollment.service.CourseService;
 import com.theo.enrollment.dto.request.course.SearchCourseRequest;
-import com.theo.enrollment.service.UpdateCourseRequest;
+import com.theo.enrollment.dto.request.course.UpdateCourseRequest;
 import com.theo.enrollment.specification.CourseSpecification;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -71,6 +71,7 @@ public class CourseServiceImpl implements CourseService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public void delete(String id) {
+        findById(id);
         courseRepository.deleteCourse(id);
     }
 

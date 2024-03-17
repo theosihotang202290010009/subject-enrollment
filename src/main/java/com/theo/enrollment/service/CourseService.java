@@ -2,6 +2,7 @@ package com.theo.enrollment.service;
 
 import com.theo.enrollment.dto.request.course.NewCourseRequest;
 import com.theo.enrollment.dto.request.course.SearchCourseRequest;
+import com.theo.enrollment.dto.request.course.UpdateCourseRequest;
 import com.theo.enrollment.dto.response.CourseResponse;
 import org.springframework.data.domain.Page;
 

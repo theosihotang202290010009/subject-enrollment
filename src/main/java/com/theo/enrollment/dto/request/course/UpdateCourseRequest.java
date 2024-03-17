@@ -1,4 +1,4 @@
-package com.theo.enrollment.service;
+package com.theo.enrollment.dto.request.course;
 
 import lombok.*;
 

@@ -8,7 +8,7 @@ import com.theo.enrollment.dto.response.CourseResponse;
 import com.theo.enrollment.dto.response.PagingResponse;
 import com.theo.enrollment.service.CourseService;
 import com.theo.enrollment.dto.request.course.SearchCourseRequest;
-import com.theo.enrollment.service.UpdateCourseRequest;
+import com.theo.enrollment.dto.request.course.UpdateCourseRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
