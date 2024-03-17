@@ -7,4 +7,5 @@ public class ResponseMessage {
     public static final String SUCCESSFULLY_UPDATE_DATA = "Successfully update data";
     public static final String ERROR_NOT_FOUND = "Data not found";
     public static final String SUCCESSFULLY_UPDATE_STATUS = "Successfully update status";
+    public static final String SUCCESSFULLY_DELETE_DATA = "Successfully delete data";
 }

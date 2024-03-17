@@ -19,7 +19,6 @@ import java.util.List;
 @Table(name = MsTablesConstant.STUDENT_TABLE)
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     @Column(name = "student_name", nullable = false)

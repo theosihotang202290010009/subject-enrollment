@@ -37,11 +37,12 @@ public class StudentServiceImpl implements StudentService {
         Date birhDate = DateUtil.parseDate(request.getBirthDate(), "yyyy-MM-dd");
         System.out.println(birhDate);
         studentRepository.createStudent(uuid, birhDate, request.getMajor(), request.getName());
-        Student student = studentRepository.findById(uuid).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-        return convertToResponse(student);
+
+        return findById(uuid);
     }
 
 
+    @Transactional(readOnly = true)
     @Override
     public Page<Student> getAll(SearchStudentRequest request) {
         Specification<Student> specification = StudentSpecification.getSpecification(request);
@@ -51,12 +52,14 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findAll(specification, pageable);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<StudentResponse> findByName(String name) {
         List<Student> students = studentRepository.findName(name);
         return students.stream().map(StudentServiceImpl::convertToResponse).toList();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public StudentResponse findById(String id) {
         Student student = studentRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, ResponseMessage.ERROR_NOT_FOUND));
