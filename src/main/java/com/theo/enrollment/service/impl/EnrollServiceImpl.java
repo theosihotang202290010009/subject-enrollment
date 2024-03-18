@@ -10,7 +10,6 @@ import com.theo.enrollment.entity.*;
 import com.theo.enrollment.repository.EnrollRepository;
 import com.theo.enrollment.service.*;
 import com.theo.enrollment.specification.EnrollSpecification;
-import com.theo.enrollment.util.DateUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

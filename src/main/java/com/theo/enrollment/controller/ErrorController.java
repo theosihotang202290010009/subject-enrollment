@@ -1,8 +1,6 @@
 package com.theo.enrollment.controller;
 
-import com.theo.enrollment.constant.ResponseMessage;
 import com.theo.enrollment.dto.response.CommonResponse;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
