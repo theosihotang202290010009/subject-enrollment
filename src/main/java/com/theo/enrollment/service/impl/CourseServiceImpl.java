@@ -60,6 +60,7 @@ public class CourseServiceImpl implements CourseService {
         return convertToResponse(course);
     }
 
+    @Transactional(readOnly = true)
     @Override
     public Course getOneById(String id) {
         return courseRepository.getCourseId(id);

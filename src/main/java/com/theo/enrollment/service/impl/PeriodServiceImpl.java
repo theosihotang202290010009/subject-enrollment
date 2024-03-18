@@ -60,6 +60,7 @@ public class PeriodServiceImpl implements PeriodService {
 
     private static PeriodResponse convertToResponse(Period period) {
         return PeriodResponse.builder()
+                .id(period.getId())
                 .period(period.getPeriod())
                 .build();
     }

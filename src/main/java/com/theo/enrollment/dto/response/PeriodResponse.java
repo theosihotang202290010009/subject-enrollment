@@ -8,5 +8,6 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class PeriodResponse {
+    private String id;
     private String period;
 }

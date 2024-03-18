@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface PeriodRepository extends JpaRepository<Period, String> {
     @Modifying
-    @Query(value = "INSERT INTO m_customer (id, period) VALUES (:id, :period)", nativeQuery = true)
+    @Query(value = "INSERT INTO m_period (id, period) VALUES (:id, :period)", nativeQuery = true)
     void create(@Param("id") String id,
                 @Param("period") String period);
 
